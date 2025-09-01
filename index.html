@@ -1,0 +1,170 @@
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>كابتن يوسف – Personal Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- ...existing content... -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "smoothscroll-polyfill": "https://esm.sh/smoothscroll-polyfill@0.4.4"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- ...existing content... -->
+  <header class="site-header">
+    <div class="brand">
+      <img class="brand-mark" src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?q=80&w=400&auto=format&fit=crop" alt="رمز تدريب" />
+      <div class="brand-text">
+        <h1 class="title glow-text">كابتن يوسف – Personal Training</h1>
+        <p class="subtitle">برامج رياضية مخصصة لكل فرد</p>
+      </div>
+    </div>
+    <button id="langToggle" class="header-lang" aria-label="Toggle language">EN</button>
+    <div class="scroll-progress" aria-hidden="true"></div>
+  </header>
+  <div class="bg-shapes" aria-hidden="true">
+    <span class="shape s1"></span>
+    <span class="shape s2"></span>
+    <span class="shape s3"></span>
+  </div>
+  <!-- ...existing content... -->
+  <main>
+    <section class="hero">
+      <div class="hero-media glow-img">
+        <img src="/IMG-20250830-WA0006.jpg" alt="تدريب شخصي - One Life, A Million Dreams" />
+      </div>
+      <div class="hero-cta reveal">
+        <h2 class="glow-text">ابدأ رحلتك الآن</h2>
+        <p>اختر الباقة المناسبة لك واحجز عبر WhatsApp بسهولة.</p>
+        <a href="#booking" class="btn btn-primary">احجز الآن</a>
+      </div>
+    </section>
+
+    <section class="features reveal" id="features">
+      <h3 class="section-title glow-text">لماذا تختار كابتن يوسف؟</h3>
+      <ul class="features-list">
+        <li class="feature-item">جدول غذائي منظم لتحقيق هدفك: خسارة وزن، زيادة كتلة عضلية، أو تحسين اللياقة.</li>
+        <li class="feature-item">كل جسم مختلف—برامج تدريبية وغذائية مصممة فرديًا وليست نسخ جاهزة.</li>
+        <li class="feature-item">متابعة مستمرة للتطور والتعديل على الخطة عند الحاجة.</li>
+        <li class="feature-item">دعم كامل وإجابة على أسئلتك طوال فترة الاشتراك.</li>
+        <li class="feature-item">إرشادات لبناء عادات صحية تحافظ على نتائجك على المدى الطويل.</li>
+      </ul>
+    </section>
+
+    <section class="highlight reveal">
+      <figure class="photo glow-img">
+        <img src="/IMG-20250830-WA0006.jpg" alt="صورة تحفيزية: One Life, A Million Dreams" />
+        <figcaption class="glow-text">One Life, A Million Dreams</figcaption>
+      </figure>
+    </section>
+
+    <section class="packages reveal" id="packages">
+      <h3 class="section-title glow-text">باقات التدريب</h3>
+      <div class="cards">
+        <article class="card">
+          <h4>شهر واحد</h4>
+          <span class="tier-badge" aria-hidden="true"></span>
+          <p class="price">600 جنيه</p>
+          <ul class="includes">
+            <li>برامج تمرين مخصصة</li>
+            <li>إرشاد كامل</li>
+            <li>دعم طوال فترة التدريب</li>
+          </ul>
+          <button class="btn btn-secondary book-btn" data-package="شهر واحد - 600 جنيه">احجز الآن</button>
+        </article>
+        <article class="card">
+          <h4>شهرين</h4>
+          <span class="tier-badge" aria-hidden="true"></span>
+          <p class="price">900 جنيه</p>
+          <ul class="includes">
+            <li>برامج تمرين مخصصة</li>
+            <li>إرشاد كامل</li>
+            <li>دعم طوال فترة التدريب</li>
+          </ul>
+          <button class="btn btn-secondary book-btn" data-package="شهرين - 900 جنيه">احجز الآن</button>
+        </article>
+        <article class="card card-premium">
+          <h4>3 شهور</h4>
+          <span class="tier-badge" aria-hidden="true"></span>
+          <p class="price">1500 جنيه</p>
+          <ul class="includes">
+            <li>برامج تمرين مخصصة</li>
+            <li>إرشاد كامل</li>
+            <li>دعم طوال فترة التدريب</li>
+          </ul>
+          <button class="btn btn-secondary book-btn" data-package="3 شهور - 1500 جنيه">احجز الآن</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="booking reveal" id="booking">
+      <h3 class="section-title glow-text">نموذج الحجز</h3>
+      <form id="bookingForm" novalidate>
+        <div class="form-row">
+          <label for="fullName">الاسم الكامل</label>
+          <input id="fullName" name="fullName" type="text" placeholder="اكتب اسمك الكامل" required />
+        </div>
+        <div class="form-row">
+          <label for="phone">رقم الهاتف (الحجز عبر WhatsApp)</label>
+          <input id="phone" name="phone" inputmode="tel" type="tel" placeholder="مثال: 01XXXXXXXXX" required />
+        </div>
+        <div class="form-row">
+          <label for="package">باقة التدريب المختارة</label>
+          <select id="package" name="package" required>
+            <option value="" disabled selected>اختر الباقة</option>
+            <option>شهر واحد - 600 جنيه</option>
+            <option>شهرين - 900 جنيه</option>
+            <option>3 شهور - 1500 جنيه</option>
+          </select>
+        </div>
+
+        <div class="form-hint">العمر، الوزن، الطول يمكن إضافتهم لاحقاً عند توفر المعلومات</div>
+
+        <div class="form-row">
+          <label for="age">العمر (اختياري)</label>
+          <input id="age" name="age" type="number" inputmode="numeric" min="5" max="100" placeholder="مثال: 28" />
+        </div>
+        <div class="form-row">
+          <label for="weight">الوزن كجم (اختياري)</label>
+          <input id="weight" name="weight" type="number" inputmode="decimal" min="20" max="300" placeholder="مثال: 75" />
+        </div>
+        <div class="form-row">
+          <label for="height">الطول سم (اختياري)</label>
+          <input id="height" name="height" type="number" inputmode="decimal" min="80" max="250" placeholder="مثال: 175" />
+        </div>
+
+        <button class="btn btn-primary submit-btn" type="submit">إرسال الحجز عبر WhatsApp</button>
+      </form>
+    </section>
+
+    <section class="social reveal" id="social">
+      <h3 class="section-title glow-text">تابعني على الشبكات</h3>
+      <div class="social-links">
+        <a class="social-link" href="https://www.instagram.com/youssefalarbii" target="_blank" rel="noopener">Instagram</a>
+        <a class="social-link" href="https://www.tiktok.com/@uossifalarbi" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </section>
+
+    <section class="contact reveal" id="contact">
+      <h3 class="section-title glow-text">طرق التواصل</h3>
+      <ul class="contact-list">
+        <li>WhatsApp للحجز: <a href="https://wa.me/201283399565" class="contact-link">01283399565</a></li>
+        <li>البريد الإلكتروني: <a href="mailto:uossifahmed4@gmail.com" class="contact-link">uossifahmed4@gmail.com</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© كابتن يوسف — جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
